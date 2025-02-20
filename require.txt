@@ -1,0 +1,17 @@
+torch
+transformers
+sentencepiece
+streamlit
+langchain
+openai
+llama-index
+chromadb
+faiss-cpu
+pypdf
+pdfminer.six
+unstructured
+pandas
+numpy
+llama-cpp-python
+huggingface_hub
+accelerate
