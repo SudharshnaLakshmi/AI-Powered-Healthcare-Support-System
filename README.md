@@ -41,11 +41,13 @@ Traditional medical inquiry systems often involve extensive manual research, lea
 **(Insert a diagram/image of the system architecture here)**
 
 ## Output
-### Chatbot Interface Example
+### Chatbot Interface
+![User Registration](output/registration.png)
+
 ![Chat Interface](output/chatinterface.png)
 
 ### Medical Report Summary Output
-![Analyze from PDF](output/analyze from pdf.png)
+![Analyze from PDF](output/analyzefrompdf.png)
 
 ### Follow-up Question Generation
 ![Follow-up Questions](output/followup.png)
