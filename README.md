@@ -42,13 +42,13 @@ Traditional medical inquiry systems often involve extensive manual research, lea
 
 ## Output
 ### Chatbot Interface Example
-**(Insert Screenshot: Example of a user querying the chatbot and receiving a response)**
+![Chat Interface](output/chatinterface.png)
 
 ### Medical Report Summary Output
-**(Insert Screenshot: Extracted summary and medicine recommendations from a PDF upload)**
+![Analyze from PDF](output/analyze_from_pdf.png)
 
 ### Follow-up Question Generation
-**(Insert Screenshot: Chatbot dynamically generating relevant follow-up questions)**
+![Follow-up Questions](output/followup.png)
 
 ## Performance Metrics
 - **Response Accuracy**: 94.5% (based on test queries and dataset evaluations)
