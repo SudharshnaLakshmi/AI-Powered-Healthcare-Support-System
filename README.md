@@ -45,7 +45,7 @@ Traditional medical inquiry systems often involve extensive manual research, lea
 ![Chat Interface](output/chatinterface.png)
 
 ### Medical Report Summary Output
-![Analyze from PDF](output/analyze_from_pdf.png)
+![Analyze from PDF](output/analyze from pdf.png)
 
 ### Follow-up Question Generation
 ![Follow-up Questions](output/followup.png)
