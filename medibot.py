@@ -163,7 +163,37 @@ def get_final_answer(current_query, followup_qa_pairs):
         if is_file_analysis:
             # Handle file content differently
             context = f"Medical report content: {current_query[:1000]}..."  # First 1000 chars
-            analysis_prompt = "Please analyze this medical report and provide a summary of findings, potential concerns, and recommendations."
+            analysis_prompt = """
+    Please analyze this medical report and follow the structured response format below. 
+
+    1. **Explain possible causes** of the conditions mentioned in the report.
+    2. **Explicitly mention medications** retrieved from the medical database:
+    - If available, provide brand names and dosage recommendations.
+    - If no medications are found, suggest home remedies.
+    3. **Recommend when to see a doctor.** 
+
+    **Example Response Format:**  
+    ---
+    **Possible Causes:**  
+    [Detailed explanation]  
+
+    **Medications:**  
+    - **For symptom relief:** [Medication name] (Dosage)  
+    - **For fever:** [Pain reliever]  
+    - **For cold/cough:** [Cough syrup, antihistamine]  
+    - **Alternative remedies:** [Home remedies if no medication is found]  
+
+    **When to See a Doctor:**  
+    - **Seek urgent care if:** [List of serious symptoms]  
+
+    **Disclaimer:** Consult a doctor before taking any medication.
+
+    ---
+
+    **Medical Report Content:** {current_query}
+
+    Provide a structured response based on the above format.
+    """
         else:
             # Regular query handling
             context = (
