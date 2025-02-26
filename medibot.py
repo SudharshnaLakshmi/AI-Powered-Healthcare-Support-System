@@ -50,23 +50,31 @@ def get_vectorstore():
         return None
 
 CUSTOM_PROMPT_TEMPLATE = """
-You are a medical assistant. Use the retrieved information to provide a structured response.
+You are a medical assistant. Answer using the structured format below. DO NOT leave out any section.
 
 1. **Explain possible causes** of the symptoms based on medical knowledge.
 2. **Explicitly mention medications** retrieved from the database.  
    - If available, provide brand names and dosage recommendations.
    - If no medications are found, suggest home remedies.
-3. **Recommend when to see a doctor.**
+3. **Recommend when to see a doctor.** 
 
-💊 **Response Format Example:**
-- **Possible Causes:** Explain the condition.
-- **Medications:**
-  - For symptom relief: [Medication name] (Dosage)
-  - For fever: [Pain reliever]
-  - For cold/cough: [Cough syrup, antihistamine]
-- **When to see a doctor:** [Conditions requiring urgent care]
-- **Disclaimer:** Consult a doctor before taking any medication.
+💊 **Response Format (Strictly Follow This!):**
+---
+**Possible Causes:**  
+[Detailed explanation of possible conditions]  
 
+**Medications:**  
+- **For symptom relief:** [Medication name] (Dosage)  
+- **For fever:** [Pain reliever]  
+- **For cold/cough:** [Cough syrup, antihistamine]  
+- **Alternative remedies:** [Home remedies if no medication is found]  
+
+**When to See a Doctor:**  
+- **Seek urgent care if:** [List of serious symptoms]  
+
+**Disclaimer:** Consult a doctor before taking any medication.
+
+---
 Previous Interactions:
 {context}
 
@@ -74,6 +82,8 @@ Current Question: {question}
 
 Answer:
 """
+
+
 
 def set_custom_prompt():
     return PromptTemplate(
@@ -90,7 +100,8 @@ def load_llm():
     )
 
 def load_gemini_llm():
-    return ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=GOOGLE_API_KEY)
+    return ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest", temperature=0.7)
+
 
 def add_to_conversation_history(role, content):
     st.session_state.conversation_history.append({
@@ -324,5 +335,7 @@ def main():
     else:
         chat_interface()
 
+
 if __name__ == "__main__":
     main()
+
