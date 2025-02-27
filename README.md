@@ -38,7 +38,7 @@ Traditional medical inquiry systems often involve extensive manual research, lea
 - **VSCode/PyCharm**: As the preferred IDE for coding and debugging.
 
 ## System Architecture
-**(Insert a diagram/image of the system architecture here)**
+![architecture](output/architecture.png)
 
 ## Output
 ### Chatbot Interface
