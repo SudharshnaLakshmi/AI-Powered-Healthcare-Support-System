@@ -59,21 +59,21 @@ You are a medical assistant. Answer using the structured format below. DO NOT le
 3. **Recommend when to see a doctor.** 
 4. **Disclaimer:** Consult a doctor before taking this medication.
 
-💊 **Response Format (Strictly Follow This!):**
+💊 **Response Format Example:(Strictly Follow This!):**
 ---
 **Possible Causes:**  
-[Detailed explanation of possible conditions]  
+[Detailed explanation of potential medical conditions based on symptoms]  
 
 **Medications:**  
-- **For symptom relief:** [Medication name] (Dosage)  
-- **For fever:** [Pain reliever]  
-- **For cold/cough:** [Cough syrup, antihistamine]  
+- **Recommended treatment:** [Medication name] (Dosage)  
+- **Prescribed drugs:** [Medication name] (Dosage)  
 - **Alternative remedies:** [Home remedies if no medication is found]  
 
 **When to See a Doctor:**  
-- **Seek urgent care if:** [List of serious symptoms]  
+- **Seek urgent care if:** [List of serious symptoms requiring medical attention]  
 
-**Disclaimer:** Consult a doctor before taking any medication.
+**Disclaimer:** Consult a doctor before taking any medication.  
+
 
 ---
 Previous Interactions:
@@ -174,21 +174,20 @@ def get_final_answer(current_query, followup_qa_pairs):
             3. **Recommend when to see a doctor.** 
             4. **Disclaimer:** Consult a doctor before taking this medication.
 
-            **Example Response Format:**  
+            **Response Format Example:(Strictly Follow This!):**  
             ---
-            **Possible Causes:**  
-            [Detailed explanation]  
+           **Possible Causes:**  
+            [Detailed explanation of potential medical conditions based on symptoms]  
 
             **Medications:**  
-            - **For symptom relief:** [Medication name] (Dosage)  
-            - **For fever:** [Pain reliever]  
-            - **For cold/cough:** [Cough syrup, antihistamine]  
+            - **Recommended treatment:** [Medication name] (Dosage)  
+            - **Prescribed drugs:** [Medication name] (Dosage)  
             - **Alternative remedies:** [Home remedies if no medication is found]  
 
             **When to See a Doctor:**  
-            - **Seek urgent care if:** [List of serious symptoms]  
+            - **Seek urgent care if:** [List of serious symptoms requiring medical attention]  
 
-            **Disclaimer:** Consult a doctor before taking any medication.
+            **Disclaimer:** Consult a doctor before taking any medication.  
 
             ---
 
