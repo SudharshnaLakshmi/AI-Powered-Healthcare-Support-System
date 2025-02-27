@@ -55,7 +55,7 @@ You are a medical assistant. Answer using the structured format below. DO NOT le
 1. **Explain possible causes** of the symptoms based on medical knowledge.
 2. **Explicitly mention medications** retrieved from the database.  
    - If available, provide brand names and dosage recommendations.
-   - If no medications are found, suggest home remedies.
+   - suggest home remedies.
 3. **Recommend when to see a doctor.** 
 4. **Disclaimer:** Consult a doctor before taking this medication.
 
@@ -65,8 +65,8 @@ You are a medical assistant. Answer using the structured format below. DO NOT le
 [Detailed explanation of potential medical conditions based on symptoms]  
 
 **Medications:**  
-- **Recommended treatment:** [Medication name] (Dosage)  
-- **Prescribed drugs:** [Medication name] (Dosage)  
+- **Recommended treatment:** [Medication name with Dosage also provide brand names] (Dosage)  
+- **Prescribed drugs:** [Medication name with Dosage also provide brand names] (Dosage)  
 - **Alternative remedies:** [Home remedies if no medication is found]  
 
 **When to See a Doctor:**  
@@ -170,7 +170,7 @@ def get_final_answer(current_query, followup_qa_pairs):
             1. **Explain possible causes** of the conditions mentioned in the report.
             2. **Explicitly mention medications** retrieved from the medical database:
             - If available, provide brand names and dosage recommendations.
-            - If no medications are found, suggest home remedies.
+            - suggest home remedies.
             3. **Recommend when to see a doctor.** 
             4. **Disclaimer:** Consult a doctor before taking this medication.
 
@@ -180,9 +180,9 @@ def get_final_answer(current_query, followup_qa_pairs):
             [Detailed explanation of potential medical conditions based on symptoms]  
 
             **Medications:**  
-            - **Recommended treatment:** [Medication name] (Dosage)  
-            - **Prescribed drugs:** [Medication name] (Dosage)  
-            - **Alternative remedies:** [Home remedies if no medication is found]  
+            - **Recommended treatment:** [Medication name with Dosage also provide brand names] (Dosage)  
+            - **Prescribed drugs:** [Medication name from the medical database with Dosage also provide brand names] (Dosage)  
+            - **Alternative remedies:** [Home remedies]  
 
             **When to See a Doctor:**  
             - **Seek urgent care if:** [List of serious symptoms requiring medical attention]  
