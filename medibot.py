@@ -57,6 +57,7 @@ You are a medical assistant. Answer using the structured format below. DO NOT le
    - If available, provide brand names and dosage recommendations.
    - If no medications are found, suggest home remedies.
 3. **Recommend when to see a doctor.** 
+4. **Disclaimer:** Consult a doctor before taking this medication.
 
 💊 **Response Format (Strictly Follow This!):**
 ---
@@ -171,6 +172,7 @@ def get_final_answer(current_query, followup_qa_pairs):
             - If available, provide brand names and dosage recommendations.
             - If no medications are found, suggest home remedies.
             3. **Recommend when to see a doctor.** 
+            4. **Disclaimer:** Consult a doctor before taking this medication.
 
             **Example Response Format:**  
             ---
