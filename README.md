@@ -62,6 +62,3 @@ The **Medical Chatbot** improves healthcare accessibility by providing instant, 
 
 This project serves as a foundational step towards developing **AI-assisted medical consultation systems**, contributing to a more intelligent, accessible, and interactive healthcare ecosystem.
 
-
-## ⚠️ **Disclaimer**  
-🚨 **This chatbot is NOT a replacement for professional medical advice.** 🚨
