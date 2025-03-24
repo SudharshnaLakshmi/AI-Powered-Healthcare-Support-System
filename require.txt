@@ -1,4 +1,9 @@
 torch
+torch
+streamlit
+faiss-cpu
+langchain
+transformers
 transformers
 sentencepiece
 streamlit
