@@ -7,6 +7,7 @@ faiss-cpu
 langchain
 PyPDF2
 pymupdf
+python-docx 
 transformers
 sentencepiece
 openai
