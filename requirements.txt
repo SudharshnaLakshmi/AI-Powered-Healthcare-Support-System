@@ -1,8 +1,8 @@
 torch
-langchain_community
 langchain_google_genai
 langchain_huggingface
 streamlit
+langchain_community
 faiss-cpu
 langchain
 PyPDF2
