@@ -19,6 +19,15 @@ HF_TOKEN = os.getenv("HF_TOKEN")
 DB_FAISS_PATH = "vectorstore/db_faiss"
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
+st.set_page_config(page_title="MediBot", layout="wide")
+st.markdown(
+    """
+    <style>
+    .stDeployButton {display:none;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 def init_session_state():
     session_state_vars = {
         "user_info": None,
