@@ -11,6 +11,7 @@ import datetime
 from dotenv import load_dotenv, find_dotenv
 import PyPDF2  # For PDF file processing
 import docx  # For DOCX file processing
+import streamlit.components.v1 as components
 
 # Load environment variables
 load_dotenv(find_dotenv())
@@ -19,15 +20,8 @@ HF_TOKEN = os.getenv("HF_TOKEN")
 DB_FAISS_PATH = "vectorstore/db_faiss"
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-st.set_page_config(page_title="MediBot", layout="wide")
-st.markdown(
-    """
-    <style>
-    .stDeployButton {display:none;}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+components.html("<script>console.log('Custom script loaded');</script>")
+
 def init_session_state():
     session_state_vars = {
         "user_info": None,
