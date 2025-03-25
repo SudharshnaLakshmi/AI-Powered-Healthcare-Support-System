@@ -20,8 +20,6 @@ HF_TOKEN = os.getenv("HF_TOKEN")
 DB_FAISS_PATH = "vectorstore/db_faiss"
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-components.html("<script>console.log('Custom script loaded');</script>")
-
 def init_session_state():
     session_state_vars = {
         "user_info": None,
