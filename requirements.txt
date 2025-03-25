@@ -5,6 +5,8 @@ langchain_huggingface
 streamlit
 faiss-cpu
 langchain
+PyPDF2
+pymupdf
 transformers
 sentencepiece
 openai
