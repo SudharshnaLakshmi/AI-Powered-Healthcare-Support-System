@@ -1,5 +1,6 @@
 torch
 langchain_community
+langchain_google_genai
 langchain_huggingface
 streamlit
 faiss-cpu
