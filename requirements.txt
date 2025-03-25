@@ -1,13 +1,11 @@
 torch
 langchain_community
+langchain_huggingface
 streamlit
 faiss-cpu
 langchain
 transformers
-transformers
 sentencepiece
-streamlit
-langchain
 openai
 llama-index
 chromadb
