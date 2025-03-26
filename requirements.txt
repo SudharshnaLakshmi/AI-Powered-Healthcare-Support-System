@@ -21,4 +21,3 @@ numpy
 llama-cpp-python
 huggingface_hub
 accelerate
-torch
